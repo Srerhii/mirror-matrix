@@ -17,8 +17,6 @@ public class Matrix1 {
                 System.out.print("Введите элемент matrix : [" + i + "][" + j + "]:");
                 int sc1 = scanner.nextInt();
                 matrix[i][j] = sc1;
-
-
             }
             System.out.println("" + Arrays.deepToString(matrix));
         }
@@ -31,7 +29,6 @@ public class Matrix1 {
             }
             System.out.println();
         }
-
         System.out.println("---------------------");
         for (int i = matrix.length - 1; i >= 0; i--) {
             for (int j = matrix[i].length - 1; j >= 0; j--) {
