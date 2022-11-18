@@ -26,6 +26,7 @@ public class Main {
             System.out.println(""+Arrays.deepToString(matrix));
 
         }
+        System.out.println(""+matrix.length);
 
       //
         scanner.close();
@@ -42,6 +43,9 @@ public class Main {
 
         }
         System.out.println("-----------------------");
+
+
+
         for (int i = 0; i <matrix.length; i++) {
 
             for (int j = 0; j < matrix[i].length; j++) {
@@ -54,6 +58,6 @@ public class Main {
 
 
         }
-
+        System.out.println(""+matrix.length);
     }
 }
