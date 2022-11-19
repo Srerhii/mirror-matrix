@@ -43,14 +43,13 @@ public class Matrix1 {
             for (int j = 0; j < y; j++) {
                 v = matrix[i][j];
 
-                matrix[i][j] = matrix[matrix.length - i - 1][matrix[i].length - j - 1];
-                matrix[matrix.length - 1][matrix[i].length - j - 1] = v;
+                matrix[i][j] = matrix[matrix.length  - 1][y - j - 1];
+                  matrix[matrix.length - 1][y - j - 1]=v;
 
             }
 
         }
-        System.out.println(""+v);
-        System.out.println("" + Arrays.deepToString(matrix));
+        System.out.println("==================");
         for (int i = 0; i < x; i++) {
 
             for (int j = 0; j < y; j++) {
@@ -59,9 +58,10 @@ public class Matrix1 {
             System.out.println();
 
         }
+        System.out.println("" + Arrays.deepToString(matrix));
     }
 }
-
+// Перебор мартрици с конца(задом на перед)
 //for (int i = matrix.length - 1; i >= 0; i--) {
 //        for (int j = matrix[i].length - 1; j >= 0; j--) {
 //        System.out.print(matrix[i][j] + "\t");
