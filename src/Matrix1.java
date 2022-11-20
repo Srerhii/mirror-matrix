@@ -36,15 +36,17 @@ public class Matrix1 {
         System.out.println("---------------------");
 
         int v = 0;
+        double a= (double) matrix.length/2;
+        double b= Math.ceil(a);
+        System.out.println("b=  "+b);
 
-
-        for (int i = 0; i < x; i++) {
+        for (int i = 0; i < b; i++) {
 
             for (int j = 0; j < y; j++) {
                 v = matrix[i][j];
 
-                matrix[i][j] = matrix[matrix.length  - 1][y - j - 1];
-                  matrix[matrix.length - 1][y - j - 1]=v;
+                matrix[i][j] = matrix[matrix.length-i - 1][y - j - 1];
+                matrix[matrix.length-i - 1][y - j - 1] = v;
 
             }
 
