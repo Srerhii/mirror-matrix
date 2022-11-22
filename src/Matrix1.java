@@ -1,3 +1,4 @@
+import java.time.Year;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -36,17 +37,29 @@ public class Matrix1 {
         System.out.println("---------------------");
 
         int v = 0;
-        double a= (double) matrix.length/2;
-        double b= Math.ceil(a);
-        System.out.println("b=  "+b);
+        double a = (double) matrix.length / 2;
+        double b = Math.ceil(a);
+        System.out.println("b=  " + b);
+        int maxY = 0;
+        double maxX = b;
 
-        for (int i = 0; i < b; i++) {
 
-            for (int j = 0; j < y; j++) {
+        for (int i = 0; i < maxX; i++) {
+            if (x % 2 == 0) {
+                maxY = y;
+            }
+            if (x % 2 != 0) {
+                maxY=y;
+            }
+
+            for (int j = 0; j < maxY; j++) {
                 v = matrix[i][j];
 
-                matrix[i][j] = matrix[matrix.length-i - 1][y - j - 1];
-                matrix[matrix.length-i - 1][y - j - 1] = v;
+                int ax = matrix.length - i - 1;
+                int ay = maxY - j - 1;
+
+                matrix[i][j] = matrix[ax][ay];
+                matrix[ax][ay] = v;
 
             }
 
